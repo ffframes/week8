@@ -109,15 +109,29 @@ function App() {
               </Button>
             </Box>
 
-            <Card.Root variant="outline" p={6} borderRadius="xl" shadow="sm">
+<Card.Root 
+              variant="elevated" 
+              p={6} 
+              borderRadius="2xl" 
+              bg="white/80" 
+              backdropFilter="blur(10px)" 
+              border="1px solid"
+              borderColor="white/20"
+              shadow="xl"
+              transition="all 0.3s ease"
+              _hover={{ shadow: "2xl", transform: "translateY(-4px)" }}
+            >
               <form onSubmit={handleSubmit}>
-                <VStack gap={4}>
+                <VStack gap={5}>
                   <Input 
                     placeholder="Your Name" 
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                     required 
                     focusRingColor="blue.500"
+                    variant="subtle"
+                    bg="gray.50"
+                    borderRadius="lg"
                   />
                   <Textarea 
                     placeholder="What's on your mind?" 
@@ -125,8 +139,20 @@ function App() {
                     onChange={(e) => setMessage(e.target.value)}
                     required
                     focusRingColor="blue.500"
+                    variant="subtle"
+                    bg="gray.50"
+                    borderRadius="lg"
+                    rows={4}
                   />
-                  <Button colorPalette="blue" width="full" type="submit" size="lg">
+                  <Button 
+                    colorPalette="blue" 
+                    width="full" 
+                    type="submit" 
+                    size="lg" 
+                    borderRadius="xl"
+                    fontWeight="bold"
+                    _hover={{ filter: "brightness(1.1)" }}
+                  >
                     Post Message
                   </Button>
                 </VStack>
