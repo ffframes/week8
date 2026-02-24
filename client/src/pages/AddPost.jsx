@@ -20,7 +20,7 @@ export default function AddPost() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:5000/posts", {
+    await fetch("https://week8-1-2zkh.onrender.com/posts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: userName, content: message }),
