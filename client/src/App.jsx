@@ -7,8 +7,9 @@ import ViewPosts from "./pages/Posts";
 
 export default function App() {
   return (
-    <Center minH="100vh" bgGradient="linear(to-br, blue.50, purple.50)" p={6}>
-      
+    
+    <Center minH="100vh"  p={6}>
+
       <VStack spacing={8} w="full" maxW="container.md">
 
         
