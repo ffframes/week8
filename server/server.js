@@ -1,13 +1,15 @@
+
 const express = require('express');
 const cors = require('cors');
 const pg = require('pg');
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 const db = new pg.Pool({
-    connectionString: 'postgres://localhost/guestbook'
+    connectionString: process.env.DB_CONN 
 });
 
 app.get('/posts', async (req, res) => {
