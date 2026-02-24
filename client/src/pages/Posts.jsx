@@ -15,7 +15,7 @@ export default function ViewPosts() {
 
 useEffect(() => {
    async function fetchPosts(){
-  const response = await fetch("https://week8-1-2zkh.onrender.com/posts");
+  const response = await fetch("https://week8-1bmc.onrender.com/posts");
   const data = await response.json();
   setPosts(data)
   };
